@@ -1,4 +1,4 @@
-# Immunoinformatics-Pipeline: An immunoinformatics pipeline refers to a series of computational steps that are used to analyze immune-related data, such as genomic or proteomic data, in order to gain insights into the immune system. Here is an overview of the steps involved in an immunoinformatics pipeline:
+# Immunoinformatics pipeline refers to a series of computational steps that are used to analyze immune-related data, such as genomic or proteomic data, in order to gain insights into the immune system. Here is an overview of the steps involved:
 
       Data collection and preprocessing: This step involves collecting and preprocessing the data that will be analyzed in the pipeline. This could include genomic or proteomic data from a variety of sources, such as next-generation sequencing or mass spectrometry.
 
