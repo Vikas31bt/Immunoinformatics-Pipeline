@@ -1,8 +1,8 @@
 # Immunoinformatics-Pipeline: An immunoinformatics pipeline refers to a series of computational steps that are used to analyze immune-related data, such as genomic or proteomic data, in order to gain insights into the immune system. Here is an overview of the steps involved in an immunoinformatics pipeline:
 
-  Data collection and preprocessing: This step involves collecting and preprocessing the data that will be analyzed in the pipeline. This could include genomic or proteomic data from a variety of sources, such as next-generation sequencing or mass spectrometry.
+      Data collection and preprocessing: This step involves collecting and preprocessing the data that will be analyzed in the pipeline. This could include genomic or proteomic data from a variety of sources, such as next-generation sequencing or mass spectrometry.
 
-Sequence analysis: The next step is to analyze the data at the sequence level. This could involve identifying and characterizing immunological sequences, such as T-cell receptors (TCRs) or B-cell receptors (BCRs), using tools such as BLAST or HMMER.
+    Sequence analysis: The next step is to analyze the data at the sequence level. This could involve identifying and characterizing immunological sequences, such as T-cell receptors (TCRs) or B-cell receptors (BCRs), using tools such as BLAST or HMMER.
 
     Structural analysis: Once the sequences have been identified, the next step is to analyze their structure. This could involve predicting the 3D structure of the TCR or BCR using molecular modeling techniques, such as homology modeling or molecular dynamics simulations.
 
