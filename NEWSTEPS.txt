@@ -1,0 +1,31 @@
+== SPLIT DATASET INTO 90/10 or 80/20 ==
+perl makedataset.pl LBtop_Confirm_Positive_epitopes.txt LBtop_Confirm_Negative_epitopes.txt 0.9
+(It makes train.pos test.pos train.neg and test.neg files after splitting into 90% and 10% data as 3rd argument is 0.9)
+(train.pos and train.neg contains 90% data while test.pos and test.neg contains 10% data)
+
+== GENERATE FETURE ==
+perl aacompfet.pl train.pos train.neg
+(It will make train.pos.aacomp train.neg.aacomp files)
+perl aacompfet.pl test.pos test.neg
+(It will make test.pos.aacomp test.neg.aacomp files)
+perl col2svm.pl -i train.pos.aacomp -o train.pos.svm -s +1
+perl col2svm.pl -i train.neg.aacomp -o train.neg.svm -s -1
+perl col2svm.pl -i test.pos.aacomp -o test.pos.svm -s +1
+perl col2svm.pl -i test.neg.aacomp -o test.neg.svm -s -1
+(the above 4 programs makes train.pos.svm train.neg.svm test.pos.svm and test.neg.svm files)
+(train.pos.svm and train.neg.svm are files having positive and negative 90% data respectively while test.pos.svm and test.neg.svm files have 10% data respectively)
+perl mix_p_n.pl train.pos.svm train.neg.svm train.mix
+perl mix_p_n.pl test.pos.svm test.neg.svm test.mix
+(the above 2 programs makes train.mix and test.mix files)
+
+== FOR PERFORMING FIVE FOLD ON 90% DATA ==
+perl five_sets.pl train.mix
+perl traintest.pl
+
+== RUN SVM ==
+perl master.pl
+
+
+== ANALYSE AND FIND BEST RESULTS ==
+perl outsvm-diff.pl OUTsvm
+(It prints best result on the terminal and also makes tempxx file having best parameters)
